@@ -4,19 +4,19 @@ A comprehensive Flutter application for managing student violations in education
 
 ## 🚀 Features
 
-### 🔐 Multi-Role Authentication
-- Guard: Records violations at school gate
-- Student: Views violation history and status
-- SAO: Manages violations and escalates cases
-- Guidance: Handles counseling and rehabilitation
+🔐 Multi-Role Authentication
+Guard: Records violations at school gate
+Student: Views violation history and status
+SAO: Manages violations and escalates cases
+Guidance: Handles counseling and rehabilitation
 
-### 📋 Violation Types
-- ❌ No School ID
-- ❌ No/Incomplete Uniform
-- ❌ Visible Piercing
-- ❌ Colored/Dyed Hair
+ 📋 Violation Types
+No School ID
+No/Incomplete Uniform
+ Visible Piercing
+ Colored/Dyed Hair
 
-### ⚡ Automated Escalation System
+⚡ Automated Escalation System
 1. 1st Offense: Warning issued
 2. 2nd Offense: Parent notification
 3. 3rd Offense: Referral to SAO
@@ -42,17 +42,14 @@ A comprehensive Flutter application for managing student violations in education
    bash
    git clone <repository-url>
    cd violation
-   
 
 3. Install dependencies
    bash
    flutter pub get
-   
 
 4. Run the application
    bash
    flutter run
-   
 
 ## 🔑 Demo Credentials
 
@@ -65,37 +62,36 @@ A comprehensive Flutter application for managing student violations in education
 
 ## 📱 App Screenshots & Features
 
-### Login Screen
+Login Screen
 - Role selection with visual indicators
 - Secure authentication system
 - Demo credentials displayed for testing
 
-### Guard Dashboard
+Guard Dashboard
 - Real-time violation recording
 - Student search and selection
 - Violation type categorization
 - Recent violations history
 
-### Student Dashboard
+Student Dashboard
 - Personal violation history
 - Current status indicators
 - Violation statistics by type
 - Compliance requirements display
 
-### SAO Dashboard
+SAO Dashboard
 - Overview of all violations
 - Case filtering and management
 - Parent contact confirmation
 - Referral to Guidance Office
 
-### Guidance Dashboard
+Guidance Dashboard
 - Referred cases management
 - Counseling session scheduling
 - Rehabilitation action planning
 - Student status tracking
 
 ## 🔄 Workflow Process
-
 
 Student Arrives → Guard Inspection → Violation Check
                                     ↓
@@ -118,35 +114,33 @@ Student Arrives → Guard Inspection → Violation Check
 
 ## 🎨 UI/UX Features
 
-- **Modern Material Design**: Clean, intuitive interface
-- **Color-Coded Status**: Visual indicators for violation severity
-- **Responsive Layout**: Works on all screen sizes
-- **Real-time Updates**: Instant status changes across roles
+Modern Material Design: Clean, intuitive interface
+Color-Coded Status: Visual indicators for violation severity
+Responsive Layout: Works on all screen sizes
+Real-time Updates: Instant status changes across roles
 
 ## 🔧 Configuration
 
-### Database Setup
+Database Setup
 The app uses SQLite with automatic initialization and seed data:
-- Default users for each role
-- Sample violation types
-- Pre-configured escalation rules
+Default users for each role
+Sample violation types
+Pre-configured escalation rules
 
-### Customization Options
-- Add new violation types in 'models/violation.dart`
-- Modify escalation logic in `providers/violation_provider.dart`
-- Update UI themes in `main.dart`
+Customization Options
+Add new violation types in 'models/violation.dart`
+Modify escalation logic in `providers/violation_provider.dart`
+Update UI themes in `main.dart`
 
 ## 🚀 Deployment
 
-### Android
+Android
 bash
 flutter build apk --release
 
-
-### iOS
+ iOS
 bash
 flutter build ios --release
-
 
 ## 🤝 Contributing
 
@@ -175,7 +169,5 @@ For support and questions:
 - [ ] Cloud database integration
 - [ ] Photo evidence capture
 - [ ] Email/SMS automation
-
-
 
 Built with ❤️ using Flutter
