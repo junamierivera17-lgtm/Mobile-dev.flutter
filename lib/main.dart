@@ -220,6 +220,7 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   Future<void> _checkSession() async {
+    await Future.delayed (Duration.zero);
     final authProvider = Provider.of<AuthProvider>(context, listen: false);
 
     // Check if user was previously logged in
