@@ -315,7 +315,7 @@ class _SAODashboardState extends State<SAODashboard> {
         title: Text(violation.violationDescription,
             style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w600)),
         subtitle: Text(
-          'ID: ${violation.studentId}  •  ${DateFormat('MMM dd, yyyy').format(violation.date)}  •  Offense #${violation.offenseCount}',
+          'ID: ${violation.studentId}  •  ${DateFormat('MM DD, YYYY').format(violation.date)}  •  Offense #${violation.offenseCount}',
           style: const TextStyle(fontSize: 11),
         ),
         trailing: Container(

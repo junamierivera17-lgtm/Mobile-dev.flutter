@@ -434,7 +434,7 @@ class _GuardDashboardState extends State<GuardDashboard> {
                       title: Text(v.violationDescription,
                           style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w600)),
                       subtitle: Text(
-                        'ID: ${v.studentId}  •  ${DateFormat('MMM dd, yyyy').format(v.date)}',
+                        'ID: ${v.studentId}  •  ${DateFormat('MM DD, YYYY').format(v.date)}',
                         style: const TextStyle(fontSize: 11, color: Colors.black45),
                       ),
                       trailing: Container(
@@ -519,7 +519,7 @@ class _GuardDashboardState extends State<GuardDashboard> {
       case ViolationType.noId:        return 'No ID';
       case ViolationType.noUniform:   return 'No Uniform';
       case ViolationType.piercing:    return 'Piercing';
-      case ViolationType.coloredHair: return 'Colored Hair';
+      case ViolationType.highlightedHair: return 'Highlighted Hair';
     }
   }
 
@@ -528,7 +528,7 @@ class _GuardDashboardState extends State<GuardDashboard> {
       case ViolationType.noId:        return Icons.badge_rounded;
       case ViolationType.noUniform:   return Icons.person_off_rounded;
       case ViolationType.piercing:    return Icons.diamond_rounded;
-      case ViolationType.coloredHair: return Icons.face_rounded;
+      case ViolationType.highlightedHair: return Icons.face_rounded;
     }
   }
 
@@ -537,7 +537,7 @@ class _GuardDashboardState extends State<GuardDashboard> {
       case ViolationType.noId:        return Colors.red;
       case ViolationType.noUniform:   return Colors.orange;
       case ViolationType.piercing:    return Colors.purple;
-      case ViolationType.coloredHair: return Colors.blue;
+      case ViolationType.highlightedHair: return Colors.blue;
     }
   }
 }

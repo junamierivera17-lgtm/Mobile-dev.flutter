@@ -192,7 +192,7 @@ class _StudentDashboardState extends State<StudentDashboard> {
             children: [
               Expanded(child: _buildStatTile('Piercing', piercingCount, Icons.diamond_rounded, Colors.purple)),
               const SizedBox(width: 8),
-              Expanded(child: _buildStatTile('Colored Hair', coloredHairCount, Icons.face_rounded, Colors.blue)),
+              Expanded(child: _buildStatTile('Highlighted  Hair', highlightedHairCount, Icons.face_rounded, Colors.blue)),
             ],
           ),
         ],
@@ -305,7 +305,7 @@ class _StudentDashboardState extends State<StudentDashboard> {
                       title: Text(v.violationDescription,
                           style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w600)),
                       subtitle: Text(
-                        '${DateFormat('MMM dd, yyyy').format(v.date)}  •  Offense #${v.offenseCount}',
+                        '${DateFormat('MM DD, YYYY').format(v.date)}  •  Offense #${v.offenseCount}',
                         style: const TextStyle(fontSize: 11),
                       ),
                       trailing: Container(

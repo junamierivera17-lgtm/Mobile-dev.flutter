@@ -70,8 +70,8 @@ class Violation {
         return 'No/Incomplete Uniform';
       case ViolationType.piercing:
         return 'Visible Piercing';
-      case ViolationType.coloredHair:
-        return 'Colored/Dyed Hair';
+      case ViolationType.highlightedHair:
+        return 'highlighted Hair';
     }
   }
 
