@@ -30,8 +30,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
   bool _obscurePassword        = true;
   bool _obscureConfirmPassword = true;
 
-  final List<String> _yearLevels = ['1st Year', '2nd Year', '3rd Year', '4th Year'];
-  final List<String> _courses    = ['BSIT', 'BSA', 'BSBA', 'BSCS', 'BSHM'];
+  final List<String> _yearLevels = ['1st Year', '2nd Year', '3rd Year', '4th Year' , 'WADT'];
+  final List<String> _courses    = ['BSIT', 'BSA', 'BSBA', 'BSCS', 'BSHM' , 'TESDA'];
 
   @override
   void dispose() {
