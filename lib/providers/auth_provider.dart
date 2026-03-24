@@ -6,7 +6,7 @@ import '../services/database_service.dart';
 
 class AuthProvider with ChangeNotifier {
   User? _currentUser;
-  bool _isLoading = false;
+  bool _isLoading = true; // Start with loading true
   String? _error;
 
   User? get currentUser => _currentUser;
@@ -16,7 +16,7 @@ class AuthProvider with ChangeNotifier {
   static const String _userSessionKey = 'user_session';
 
   AuthProvider() {
-    _loadUserFromSession();
+    loadInitialUser(); // Load user session on initialization
   }
 
   void _setLoading(bool loading) {
@@ -36,6 +36,7 @@ class AuthProvider with ChangeNotifier {
         await _saveUserToSession(user);
         return user;
       }
+      _error = 'Invalid credentials. Please try again.';
       return null; // Return null if login fails
     } catch (e) {
       _error = 'An error occurred during login: $e';
@@ -48,11 +49,10 @@ class AuthProvider with ChangeNotifier {
   Future<void> logout() async {
     _setLoading(true);
     _currentUser = null;
-    
-    // Clear user session
+
     final prefs = await SharedPreferences.getInstance();
     await prefs.remove(_userSessionKey);
-    
+
     _setLoading(false);
   }
 
@@ -62,8 +62,7 @@ class AuthProvider with ChangeNotifier {
     await prefs.setString(_userSessionKey, userJson);
   }
 
-  Future<void> _loadUserFromSession() async {
-    _setLoading(true);
+  Future<void> loadInitialUser() async {
     final prefs = await SharedPreferences.getInstance();
     final userJson = prefs.getString(_userSessionKey);
 
@@ -72,11 +71,10 @@ class AuthProvider with ChangeNotifier {
         final userData = json.decode(userJson);
         _currentUser = User.fromJson(userData);
       } catch (e) {
-        // Handle potential JSON decoding errors
         _error = 'Failed to load user session: $e';
         _currentUser = null;
       }
     }
-    _setLoading(false);
+    _setLoading(false); // Set loading to false after attempting to load
   }
 }
